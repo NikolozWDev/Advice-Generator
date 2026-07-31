@@ -7,7 +7,7 @@ The project uses a local data source to provide a consistent experience while ke
 ## Website
 
 **Live Demo:**  
-https://nikolozwdev.github.io/advice-generator/
+https://nikolozwdev.github.io/Advice-Generator/
 
 ## About
 
