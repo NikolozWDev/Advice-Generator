@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="assets/images/icon-dice.svg">
-    <title>Advice-generator</title>
-    <script type="module" src="js/index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/images/icon-dice.svg">
+  <title>Advice Empire</title>
 </head>
 <body>
-
-    <div class="primary-container">
-
-
-        <div class="main-section">
-
-            <div class="helper">
-            <p class="section-1">ADVICE #<span class="addnum">x</span></p>
-
-            <p class="section-2">Click to read</p>
-
-            <div class="section-3">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line2"></div>
-                <div class="line1"></div>
-            </div>
-            </div>
-
-            <div class="section-4">
-                <img src="assets/images/icon-dice.svg">
-            </div>
-
+  <div class="primary-container">
+    <div class="main-card">
+      <div class="card-inner">
+        <p class="advice-number">ADVICE #<span id="adviceId">0</span></p>
+        <p class="advice-text" id="adviceText">Click the dice to receive wisdom</p>
+        <div class="divider">
+          <span class="line"></span>
+          <span class="pause">❚❚</span>
+          <span class="line"></span>
         </div>
-
-
+        <div class="actions">
+          <button class="action-btn copy-btn" title="Copy advice" id="copyBtn">📋</button>
+          <button class="action-btn share-btn" title="Share on Twitter" id="shareBtn">🐦</button>
+          <button class="action-btn history-btn" title="View history" id="historyBtn">📜</button>
+        </div>
+      </div>
+      <button class="dice-btn" id="diceBtn" aria-label="Generate advice">
+        <img src="assets/images/icon-dice.svg" alt="Dice">
+      </button>
     </div>
-    
+
+    <div class="history-panel" id="historyPanel">
+      <div class="history-header">
+        <h3>Past Advice</h3>
+        <button class="close-history" id="closeHistory">✕</button>
+      </div>
+      <ul id="historyList"></ul>
+      <button class="clear-history" id="clearHistory">Clear All</button>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
